@@ -158,7 +158,8 @@ Project Link: [https://github.com/CognitiveNeuroLab/Illusory-Contours](https://g
 
 
 
+
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-
+ 
 <!--* [Sophie Molhom](https://www.cognitiveneurolab.com/dr-sophie-molholm)-->
