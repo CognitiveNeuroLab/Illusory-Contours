@@ -59,9 +59,11 @@ Folder 3 - "Stimuli"            - this folder will contain all the pictures
 
 ### Stimuli
 
-<!--There are 2 clickstreams that are created in the lab. One will be a **40Hz clickstream of 500ms in duration** the other is a **27Hz clickstream also of 500ms in duration**. While the participant listens to them, they will see a fixation cross.
-There are some pictures that will show up when the participant is half way during each block, this is so that people have a little break. Because we will collect data from kids we don't want them to click when they are ready, but instead it counts down and tells them to re-focus.-->
-
+There are 2 stimuli, 1 stimuli that creates the Illusion, and one that seems like a random scramble of circles with a quarter missing.  
+![Illusion stimm](https://github.com/CognitiveNeuroLab/Illusory-Contours/blob/main/images/illusion.bmp)  
+This is the illusion.  
+![scramble stim](https://github.com/CognitiveNeuroLab/Illusory-Contours/blob/main/images/scramble.bmp)  
+This is the non-illusion stimulus.
 
 ### Logfiles
 
@@ -78,7 +80,7 @@ The experiment chooses a new order for each participant. Currently only 1 sequen
 
 ### Instructions
 
-Still need to write out the exact instructions word for word.
+The participant is instructed to always pay attention to the square in the center. They should ignore whatever else happens on the screen and click if the square changes color. 
 
 ### Trigger codes
 
@@ -100,13 +102,14 @@ port code 12  = The version with 40hz as standard has begon
 ### Timing
 The reason this experiment is coded in presentation, is because of the timing resolution of this software/language. When setup correctly this experiment has potentially 1ms of jitter. This will be measured here at our lab, using an oscilloscope. It is critical that this is re-tested before EEG data is collected. This has not yet happened because we haven't decided on the duration of the trials.
 
-<!--After testing the timing we can now say that the port_code triggers happen at the same time (0ms) with the onset of the stimuli.  
-![assr_27hz_onset](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/assr_27hz_onset.JPG) ![assr_40hz_onset](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/assr_40hz_onset.JPG)   
-This is the onset of the 27hz tone burst ------- This is the onset of the 40hz tone burst  
-![assr_27hz_freq](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/assr_27hz_freq.JPG) ![assr_40hz_freq](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/assr_40hz_freq.JPG)    
-This is the frequency of the 27 hz tone burst ------- This is the frequency of the 40 hz tone burst  
-![assr_40hz_isi_example](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/assr_40hz_isi_example.JPG)  
-This is one of the ISIs as an example. In this case it's after the 40hz tone burst with the ISI set to 628. As you can see this results in a ISI of 640ms.   -->
+After testing the timing we can now say that the port_code triggers happen at the same time (0ms) with the onset of the stimuli.  
+![Onset of stim](https://github.com/CognitiveNeuroLab/Illusory-Contours/blob/main/images/IC onset.JPG)  
+  
+Here we can see that the stim actually last indeed for 100ms. 
+![Stim duration](https://github.com/CognitiveNeuroLab/Illusory-Contours/blob/main/images/IC stim duration.JPG)  
+  
+In both cases we tested this over time for 100s of trials and made sure that across trials it is also stable. 
+
 
 
 **if you plan to use this paradigm** 
@@ -139,7 +142,7 @@ Showing the same pattern where the 40hz stream is clear and the 27hz is not as m
 1. We are only using the stimuli showing up in the center, so we can reduce the trials (by 3X)  
 2. We are saving the eye tracking data  
 3. We are not pausing the paradigm if we lose eye tracking  
-4. Block (x trials) will be interrupted after (x trials) with a little break  
+4. Blocks will be interrupted after 50, 90 and 130 trials with a little 5 sec break for kids to regain focus.   
 5. The attention task is in blue and yellow (to reduce the change that color blind people wouldn't be able to see the change)
 
 ## License
@@ -147,19 +150,16 @@ Showing the same pattern where the 40hz stream is clear and the 27hz is not as m
 Distributed under the MIT License. See [LICENSE](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/master/LICENSE.txt) for more information.
 
 
-
-<!-- CONTACT -->
 ## Contact
 
-Main project - Emily Knight - twitter? - email? - website? 
-Sfari - Douwe Horsthuis - [@douwejhorsthuis](https://twitter.com/douwejhorsthuis) - douwehorsthuis@gmail.com - www.douwehorsthuis.com
+Main project - [Emily Knight](https://www.urmc.rochester.edu/pediatrics/developmental-and-behavioral-pediatrics/our-fellows.aspx) emilyj_knight@urmc.rochester.edu
+Sfari version - [Douwe Horsthuis](www.douwehorsthuis.com) - [@douwejhorsthuis](https://twitter.com/douwejhorsthuis) - douwehorsthuis@gmail.com
 
 Project Link: [https://github.com/CognitiveNeuroLab/Illusory-Contours](https://github.com/CognitiveNeuroLab/Illusory-Contours)
 
 
-
-
-<!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
- 
-<!--* [Sophie Molhom](https://www.cognitiveneurolab.com/dr-sophie-molholm)-->
+  
+[John Foxe](https://www.urmc.rochester.edu/people/29722174-john-j-foxe) 
+[Edward Freedman](https://www.urmc.rochester.edu/people/23038240-edward-g-freedman)
+[Sophie Molhom](https://www.cognitiveneurolab.com/dr-sophie-molholm)
