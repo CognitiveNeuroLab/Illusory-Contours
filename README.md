@@ -1,5 +1,3 @@
-# This is all still under constuction. Not final version
-
 <br />
 <p align="center">
   <a href="https://github.com/CognitiveNeuroLab/Illusory-Contours/">
@@ -103,10 +101,10 @@ port code 12  = The version with 40hz as standard has begon
 The reason this experiment is coded in presentation, is because of the timing resolution of this software/language. When setup correctly this experiment has potentially 1ms of jitter. This will be measured here at our lab, using an oscilloscope. It is critical that this is re-tested before EEG data is collected. This has not yet happened because we haven't decided on the duration of the trials.
 
 After testing the timing we can now say that the port_code triggers happen at the same time (0ms) with the onset of the stimuli.  
-![Onset of stim](https://github.com/CognitiveNeuroLab/Illusory-Contours/blob/main/images/IC onset.JPG)  
+![Onset of stim](https://github.com/CognitiveNeuroLab/Illusory-Contours/blob/main/images/IC%onset.JPG)  
   
 Here we can see that the stim actually last indeed for 100ms. 
-![Stim duration](https://github.com/CognitiveNeuroLab/Illusory-Contours/blob/main/images/IC stim duration.JPG)  
+![Stim duration](https://github.com/CognitiveNeuroLab/Illusory-Contours/blob/main/images/IC%stim%duration.JPG)  
   
 In both cases we tested this over time for 100s of trials and made sure that across trials it is also stable. 
 
