@@ -151,7 +151,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/CognitiveNeu
 
 ## Contact
 
-Main project - [Emily Knight](https://www.urmc.rochester.edu/pediatrics/developmental-and-behavioral-pediatrics/our-fellows.aspx) - [Github](https://github.com/eknight3) -  emilyj_knight@urmc.rochester.edu
+Main project - [Emily Knight](https://www.urmc.rochester.edu/pediatrics/developmental-and-behavioral-pediatrics/our-fellows.aspx) - [Github](https://github.com/eknight3) -  emilyj_knight@urmc.rochester.edu  
 Sfari version - [Douwe Horsthuis](www.douwehorsthuis.com) - [Github](https://github.com/DouweHorsthuis) - douwehorsthuis@gmail.com
 
 Project Link: [https://github.com/CognitiveNeuroLab/Illusory-Contours](https://github.com/CognitiveNeuroLab/Illusory-Contours)
