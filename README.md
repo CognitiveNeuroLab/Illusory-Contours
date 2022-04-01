@@ -83,20 +83,21 @@ The participant is instructed to always pay attention to the square in the cente
 ### Trigger codes
 
 The presentation software sends codes to the EEG system so that the responses and the stimuli can be time-locked in the EEG data. The following is an explanation of each trigger code: 
-<!--
-```
-port code 201 = start recording
-port code 200 = pause recording 
-port code 1   = response
-port code 11  = 40hz standard tone
-port code 12  = 27hz deviant
-port code 21  = 27hz standard tone
-port code 22  = 40hz deviant
-port code 27  = The version with 27hz as standard has begon
-port code 12  = The version with 40hz as standard has begon
 
 ```
--->
+port code 100,250   = response
+port code 77  = Dot event
+port code 21  = IC image, center position
+port code 11  = IC image, left position
+port code 31  = IC image, Right position
+port code 20  = NC image, center position
+port code 10  = NC image, left position
+port code 30  = NC image, right position
+port code 254  = pause on
+port code 255  = pause off
+
+```
+
 ### Timing
 The reason this experiment is coded in presentation, is because of the timing resolution of this software/language. When setup correctly this experiment has potentially 1ms of jitter. This will be measured here at our lab, using an oscilloscope. It is critical that this is re-tested before EEG data is collected. This has not yet happened because we haven't decided on the duration of the trials.
 
@@ -150,8 +151,8 @@ Distributed under the MIT License. See [LICENSE](https://github.com/CognitiveNeu
 
 ## Contact
 
-Main project - [Emily Knight](https://www.urmc.rochester.edu/pediatrics/developmental-and-behavioral-pediatrics/our-fellows.aspx) emilyj_knight@urmc.rochester.edu
-Sfari version - [Douwe Horsthuis](www.douwehorsthuis.com) - [@douwejhorsthuis](https://twitter.com/douwejhorsthuis) - douwehorsthuis@gmail.com
+Main project - [Emily Knight](https://www.urmc.rochester.edu/pediatrics/developmental-and-behavioral-pediatrics/our-fellows.aspx) - [Github](https://github.com/eknight3) -  emilyj_knight@urmc.rochester.edu
+Sfari version - [Douwe Horsthuis](www.douwehorsthuis.com) - [Github](https://github.com/DouweHorsthuis) - douwehorsthuis@gmail.com
 
 Project Link: [https://github.com/CognitiveNeuroLab/Illusory-Contours](https://github.com/CognitiveNeuroLab/Illusory-Contours)
 
