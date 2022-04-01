@@ -20,10 +20,10 @@
     - [Sequences](#sequences)
     - [Inter stimulus interval](#inter-stimulus-interval)
     - [Instructions](#instructions)
+    - [Task](#task)
     - [Trigger codes](#trigger-codes)
     - [Timing](#timing)
     - [Data collection](#data-collection)
-    - [Piloting Results](#piloting-results)
 3. [Sfari project changes](#sfari-project-changes)    
 3. [License](#license)
 3. [Contact](#contact)
@@ -34,8 +34,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!--This project is part of a larger group of experiments for the SFARI grant. All of these paradigms are aimed at our ASD work. 
-The aSSR is diminished in autism and in first degree relatives of people with autism (Wilson et al., 2007; Seymour et al., 2020). Presenting clicks at 40 Hz, using the aSSR we will test the integrity of auditory driven gamma band oscillatory function. EEG will be collected while participants are presented with 500 ms duration 40Hz (25ms between clicks) or 27Hz (37ms between clicks) click streams. With the other functioning as a deviant. The stimuli are presented at a comfortable listening level of ~~75dB SPL. These will be presented to central space through a single hidden speaker~~ **still undecided**. Participants will fixate centrally on a cross on the screen in front of them while they try to detect the deviants. Analyses will focus on the gamma band auditory evoked response. See Figure 1 pilot data, aSSR from NTs and individuals with Rett Syndrome.--> 
 
 
 ### Built With
@@ -69,16 +67,19 @@ logfiles with experiment reaction times and other information are automatically 
 
 ### Sequences 
 
-<!--There are sequence files that dictate when a deviant will happen. These files are created in MATLAB and contain 1s and 2s. Each 1 results in a standard being presented and every 2 will result a deviant. The rule in MATLAB is that the first 5 trials are always standards and after that there are always at least 2 standards between a deviant. Furthermore, there are 100 trials and the standard/deviant ration is 85/15. 
-The experiment chooses a new order for each participant. Currently only 1 sequence file exists. To run the experiment you will first need to open the MATLAB file called MMN_makeSequence and run it 1x. This will create 100 randomized sequence files. -->
+Both the location, left center or right, and whether it's a NC or IC image is fully randomized by presentation. 
 
 ### Inter stimulus interval  
   
-<!--The paradigm has a somewhat jittered Inter stimulus interval(ISI). The ISI ranges from 500 to 800 ms in 20ms steps. This results in 16 possibilities that are randomized used for 16 trials and randomized again on a loop until the paradigm is done. Like this we make sure that whatever ISI is chosen is random, but also that all of them happen as often as possible within the amount of trials of the paradigm.-->
+This is a randomly selected number between 800ms and 1400ms. 
 
 ### Instructions
 
-The participant is instructed to always pay attention to the square in the center. They should ignore whatever else happens on the screen and click if the square changes color. 
+The participant is instructed to always pay attention to the square in the center. They should ignore whatever else happens on the screen and click if the square changes color.  
+  
+### Task  
+  
+The participant will always see the dot, but it will change color on average every ten seconds (the actual time course is randomized). This color change lasts for 160ms. 
 
 ### Trigger codes
 
@@ -112,30 +113,15 @@ In both cases we tested this over time for 100s of trials and made sure that acr
 
 
 **if you plan to use this paradigm** 
-You need to do the same and test if for your setup the timing is also okay. This timing is dictated by the refresh rate of your screen, the quality of your computer and potentially other minor factors. If you want to change the timing you can change  "deltat = ..". Whenever this shows up in the code it will delay the sending of the trigger by x amount of milliseconds. So in our case we noticed the screen being 9ms delayed, so this is why we delay the trigger by the same amount. 
--->
+You need to do the same and test if for your setup the timing is also okay. This timing is dictated by the refresh rate of your screen, the quality of your computer and potentially other minor factors. If you want to change the timing you can change  "deltat = ..". Whenever this shows up in the code it will delay the sending of the trigger by x amount of milliseconds. So in our case we noticed the screen being 9ms delayed, so this is why we delay the trigger by the same amount.  
+  
+The other thing that is important is the size of the stimuli on the screen. In the origial paradigm they are 9.5cm by 9.5cm. This should be changed if the viewing distance is changed.   
+  
+
 ### Data collection
 This experiment is used to collected EEG data, eye tracking data and RT data.  
 
 
-### Piloting Results  
-  
-<!--We tested the paradigm on 5 members from our lab and show here that the paradigm indeed works. Specially the 40hz stream seems to be giving the expected reponse in adults and there is reason to thing that the 27hz will be instead more clear in the target age range (8-12y/o). To see more specifics of the analysis [click here](https://github.com/CognitiveNeuroLab/sfari-analysis-pipelines/blob/main/ASSR.md). The results are as followed:  
-  
-The strength of the evoked response:  
-  
-![evoked reponse](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/ERP_cz.png)  
-  
-The power spectrum:  
-  
-![Power Spectrum](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/Power_spectrum.jpg)  
-The lighter one is the 40hz stream the darker one is the 27Hz.  
-  
-The time/frequency analysis (using newtimef):  
-![Time Frequency analysis 27hz](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/Time_freq_27.jpg) ![Time Frequency analysis 40hz](https://github.com/CognitiveNeuroLab/ASSR-oddball/blob/main/images/Time_freq_40.jpg)  
-Showing the same pattern where the 40hz stream is clear and the 27hz is not as much.  -->
-  
-  
 ## Sfari project changes  
   
 1. We are only using the stimuli showing up in the center, so we can reduce the trials (by 3X)  
