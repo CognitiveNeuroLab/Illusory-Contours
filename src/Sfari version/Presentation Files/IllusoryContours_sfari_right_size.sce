@@ -28,8 +28,8 @@ array {
 bitmap {filename = "kids_1.jpg"; preload = true;} spongebob_1;
 ### kid's break stuff ###
 
-bitmap {filename = "4_1.bmp"; transparent_color = 128,128,128;} IC_bmp;
-bitmap {filename = "4_2.bmp"; transparent_color = 128,128,128;} NC_bmp;
+bitmap {filename = "4_1.bmp"; transparent_color = 128,128,128; width=950; height=1220;} IC_bmp; #gives a 12x12cm IC stim for 1280x1024
+bitmap {filename = "4_2.bmp"; transparent_color = 128,128,128; width=950; height=1220;} NC_bmp;
 
 box {height = 5; width = 5; color = 255,255,0;} green_dot; #re-calibrated from 6, 222, 181 on 8-21-08 (52,147,125)   #Douwe 1/24/2021 edit: changed it to yellow for color blindness
 box {height = 5; width = 5; color = 0, 0, 255;} red_dot;   # re-calibrated from 255, 137, 190 on 8-21-08 (199,36,84) #Douwe 1/24/2021 edit: changed it to blue for color blindness

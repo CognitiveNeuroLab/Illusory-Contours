@@ -129,6 +129,7 @@ This experiment is used to collected EEG data, eye tracking data and RT data.
 3. We are not pausing the paradigm if we lose eye tracking  
 4. Blocks will be interrupted after 50, 90 and 130 trials with a little 5 sec break for kids to regain focus.   
 5. The attention task is in blue and yellow (to reduce the change that color blind people wouldn't be able to see the change)
+6. The stimuli are slightly bigger so that the visual angle is the same, but the paradigm can be ran at a distance of 97cm.
 
 ## License
 
